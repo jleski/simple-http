@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-http
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: simple-http
+  template:
+    metadata:
+      labels:
+        app: simple-http
+        name: simple-http
+    spec:
+      containers:
+        - name: application
+          image: jledev.azurecr.io/simple-http
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: jledev-azurecr-cred
