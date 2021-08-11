@@ -24,7 +24,10 @@ func main() {
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Welcome to Simple HTTP Service!")
+	_, err := fmt.Fprintf(w, "Welcome to Simple HTTP Service!\nService Endpoints:\n  GET /api/headers\n")
+	if err != nil {
+		log.Println("ERROR: Unable to write HTTP response back to client.")
+	}
 }
 
 func ApiGet(w http.ResponseWriter, r *http.Request) {
