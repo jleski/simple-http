@@ -1,0 +1,11 @@
+deployAppUsingPulumi:
+  percentage: 100
+  true: true
+  false: false
+  default: false
+
+configureNamespaceUsingPulumi:
+  percentage: 100
+  true: true
+  false: false
+  default: false
