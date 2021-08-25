@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: simple-http.apps-aks1.alusta.cloud
+    - host: simple-http.apps.ocp.az.alusta.cloud
       http:
         paths:
           - path: /
