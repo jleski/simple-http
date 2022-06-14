@@ -36,6 +36,9 @@ service:
   type: ClusterIP
   port: 80
 
+# which port in the pod is listening on
+containerPort: 8080
+
 ingress:
   enabled: false
   className: ""
